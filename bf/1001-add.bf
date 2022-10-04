@@ -1,13 +1,10 @@
-, #Take user input for first int
->> , #Take User input for second int
-<< #Move to incremeter
-[
->> + Moving one bit at time combining our ascii values
-<< - Decrementing int 1 ascii value
-]
-++++ # Four runs for loop two
-[
->> ----- ----- -- #Each loop decrement 12 for a total of 48 or ascii zero
-<< - #decrement counter
-]
->> . #print result
+
+read num (ascii - 48) into block #1
+>,-----------------------------------------------
+read num (ascii - 48 ('0')) into block #2
+>,-----------------------------------------------
+
+[<<+>>-] add block #2 to block #0
+<[<+>-] add block #1 to block #0
+<++++++++++++++++++++++++++++++++++++++++++++++++
+. print contents of block #0
